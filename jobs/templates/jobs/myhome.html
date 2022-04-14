@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>GARIMA RAWAT</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" >
+  </head>
+
+  <body>
+
+    
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">GARIMA RAWAT</h1>
+          <p class="lead text-muted">I AM A PYTHON DEVLOPER .I ENJOY WORKING ON WEBSITE DESIGNING.</p>
+          <p>
+            <a href="MAILto:garima@zappycode.com" class="btn btn-primary my-2">send mail me</a>
+            <!--<a href="my project on git hub:garima.rawat1611" class="btn btn-secondary my-2">check me project work</a>-->
+          </p>
+          <img src="{%static 'cmputer.jpg'%}"heigth=300></img>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          {%for job in jobs.all%}
+           <div class="row">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="{{ job.image.url }}"height=100>
+                <div class="card-body">
+                  <p class="card-text">{{job.summary}}</p>
+                  </div>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+   
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.js' %}" ></script>
+    <script src="{% static 'jquery-3.3.1.min.js' %}" ></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+
+  </body>
+</html>
+
